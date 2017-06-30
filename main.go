@@ -28,7 +28,7 @@ func getHandler(h Humanizable) http.HandlerFunc {
 		}
 
 		// Output animal age in human years.
-		// Not the explicit conversion from int64 to int, Golang is strict about types
+		// Note the explicit conversion from int64 to int, Golang is strict about types
 		fmt.Fprintf(w, "%d years in %s years: %d", int(age), h.Path(), h.AgeInHumanYears(int(age)))
 	}
 }
